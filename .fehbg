@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-scale '/home/julius/Pictures/Wallpapers/annie-spratt-y_3-VTdpBYY-unsplash.jpg' 
