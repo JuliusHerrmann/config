@@ -106,7 +106,7 @@ font-0 = Source Code Pro Medium:pixelsize=10;1
 font-1 = MaterialIcons:size=12;+2
 
 ;modules-left = bspwm music-info
-modules-left = bspwm
+modules-left = bspwmLeft
 modules-center = date 
 modules-right = pulseaudio cpu temperature wlan eth battery 
 
@@ -170,6 +170,27 @@ label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
 label-empty = %index%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 1
+
+; Separator in between workspaces
+; label-separator = |
+
+[module/bspwmLeft]
+type = internal/bspwm
+
+label-focused = %name%
+label-focused-background = ${colors.background-alt}
+label-focused-padding = 1
+
+label-occupied = %name%
+label-occupied-padding = 1
+
+label-urgent = %name%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+
+label-empty = %name%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 1
 
