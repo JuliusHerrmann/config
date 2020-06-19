@@ -1,0 +1,6 @@
+#For example:
+# './prompt "Shutdown?" "shutdown -h now'
+
+[ $(echo -e "No\nYes" | rofi -dmenu -i -p "$1") \
+== "Yes" ] && $2
+
