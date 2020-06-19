@@ -1,0 +1,408 @@
+!SESSION 2019-12-08 15:18:59.466 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.5
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/julius/.config/coc/extensions/coc-java-data/jdt_ws_64141f8ddf850610202ec4528c574d70
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:02.243
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:02.427
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:02.455
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:02.456
+!MESSAGE Initializing Java Language Server 0.48.0.201911251822
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:02.471
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:02.471
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.updateSourceAttachment, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:02.490
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:02.538
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:02.647
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:03.526
+!MESSAGE Try to create an invisible project for the workspace /home/julius/Documents/Informatik/Angelina/VerketteteListen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:03.526
+!MESSAGE Creating the Java project VerketteteListen_cc835822
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:03.541
+!MESSAGE Finished creating the Java project VerketteteListen_cc835822
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:03.558
+!MESSAGE Successfully created a workspace invisible project VerketteteListen_cc835822
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:03.560
+!MESSAGE Workspace initialized in 1086ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:03.710
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:03.721
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:03.736
+!MESSAGE >>New configuration: {java={jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=warning}}, configuration={checkProjectSettingsExclusions=true, updateBuildConfiguration=interactive}, trace={server=off}, import={gradle={enabled=true, wrapper={enabled=true}}, maven={enabled=true}, exclusions=[**/node_modules/**, **/.metadata/**, **/archetype-resources/**, **/META-INF/maven/**]}, referencesCodeLens={enabled=false}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true, comments={enabled=true}, onType={enabled=true, fixComment={enabled=true}}}, autobuild={enabled=true}, maxConcurrentBuilds=1.0, completion={enabled=true, overwrite=true, guessMethodArguments=false, favoriteStaticMembers=[org.junit.Assert.*, org.junit.Assume.*, org.junit.jupiter.api.Assertions.*, org.junit.jupiter.api.Assumptions.*, org.junit.jupiter.api.DynamicContainer.*, org.junit.jupiter.api.DynamicTest.*, org.mockito.Mockito.*, org.mockito.ArgumentMatchers.*, org.mockito.Answers.*], importOrder=[java, javax, com, org]}, progressReports={enabled=true}, foldingRange={enabled=true}, maven={downloadSources=false}, codeGeneration={hashCodeEquals={useJava7Objects=false, useInstanceof=false}, useBlocks=false, generateComments=false, toString={template=${object.className} [${member.name()}=${member.value}, ${otherMembers}], codeStyle=STRING_CONCATENATION, skipNullValues=false, listArrayContents=true, limitElements=0.0}}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:03.737
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:04.372
+!MESSAGE Reconciled 0. Took 230 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:04.484
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:04.484
+!MESSAGE 0 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:04.488
+!MESSAGE Validated 1. Took 101 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:04.509
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:04.513
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:04.514
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:04.516
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:21.343
+!MESSAGE >> document/didClose
+!SESSION 2019-12-08 15:19:24.490 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.5
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/julius/.config/coc/extensions/coc-java-data/jdt_ws_64141f8ddf850610202ec4528c574d70
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-12-08 15:19:25.180
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:26.439
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:26.554
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:26.586
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:26.587
+!MESSAGE Initializing Java Language Server 0.48.0.201911251822
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:26.601
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:26.601
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.updateSourceAttachment, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:26.618
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:27.021
+!MESSAGE Workspace initialized in 416ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:27.120
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:27.126
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:27.142
+!MESSAGE >>New configuration: {java={jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=warning}}, configuration={checkProjectSettingsExclusions=true, updateBuildConfiguration=interactive}, trace={server=off}, import={gradle={enabled=true, wrapper={enabled=true}}, maven={enabled=true}, exclusions=[**/node_modules/**, **/.metadata/**, **/archetype-resources/**, **/META-INF/maven/**]}, referencesCodeLens={enabled=false}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true, comments={enabled=true}, onType={enabled=true, fixComment={enabled=true}}}, autobuild={enabled=true}, maxConcurrentBuilds=1.0, completion={enabled=true, overwrite=true, guessMethodArguments=false, favoriteStaticMembers=[org.junit.Assert.*, org.junit.Assume.*, org.junit.jupiter.api.Assertions.*, org.junit.jupiter.api.Assumptions.*, org.junit.jupiter.api.DynamicContainer.*, org.junit.jupiter.api.DynamicTest.*, org.mockito.Mockito.*, org.mockito.ArgumentMatchers.*, org.mockito.Answers.*], importOrder=[java, javax, com, org]}, progressReports={enabled=true}, foldingRange={enabled=true}, maven={downloadSources=false}, codeGeneration={hashCodeEquals={useJava7Objects=false, useInstanceof=false}, useBlocks=false, generateComments=false, toString={template=${object.className} [${member.name()}=${member.value}, ${otherMembers}], codeStyle=STRING_CONCATENATION, skipNullValues=false, listArrayContents=true, limitElements=0.0}}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:27.144
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:27.619
+!MESSAGE Reconciled 0. Took 103 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:27.706
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:27.706
+!MESSAGE 0 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:27.709
+!MESSAGE Validated 1. Took 69 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:27.731
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:27.733
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:27.758
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:27.763
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:30.178
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:30.301
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:30.759
+!MESSAGE Reconciled 0. Took 43 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:31.268
+!MESSAGE begin problem for /Playlist.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:31.268
+!MESSAGE 0 problems reported for /Playlist.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:31.268
+!MESSAGE Validated 1. Took 58 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:33.184
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:33.290
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:33.763
+!MESSAGE Reconciled 0. Took 17 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:34.237
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:34.237
+!MESSAGE 0 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:34.238
+!MESSAGE Validated 1. Took 23 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:39.492
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:39.561
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:39.609
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:39.969
+!MESSAGE Reconciled 0. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:40.396
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:40.396
+!MESSAGE 1 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:40.397
+!MESSAGE Validated 1. Took 27 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:40.941
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:41.407
+!MESSAGE Reconciled 0. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:41.828
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:41.828
+!MESSAGE 0 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:19:41.829
+!MESSAGE Validated 1. Took 20 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:05.531
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:05.944
+!MESSAGE Reconciled 0. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:06.414
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:06.414
+!MESSAGE 0 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:06.415
+!MESSAGE Validated 1. Took 19 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:06.902
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:07.366
+!MESSAGE Reconciled 0. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:07.820
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:07.820
+!MESSAGE 0 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:07.821
+!MESSAGE Validated 1. Took 30 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:13.260
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:13.689
+!MESSAGE Reconciled 0. Took 25 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:14.131
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:14.131
+!MESSAGE 1 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:14.131
+!MESSAGE Validated 1. Took 40 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:14.173
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:14.587
+!MESSAGE Reconciled 0. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:15.008
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:15.008
+!MESSAGE 0 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:15.009
+!MESSAGE Validated 1. Took 19 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:15.986
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:16.405
+!MESSAGE Reconciled 0. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:16.877
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:16.877
+!MESSAGE 1 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:16.881
+!MESSAGE Validated 1. Took 24 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:19.122
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:19.536
+!MESSAGE Reconciled 0. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:20.004
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:20.004
+!MESSAGE 0 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:20.004
+!MESSAGE Validated 1. Took 17 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:32.510
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:33.001
+!MESSAGE Reconciled 0. Took 36 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:33.472
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:33.472
+!MESSAGE 3 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:20:33.473
+!MESSAGE Validated 1. Took 21 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:01.150
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:01.354
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:01.770
+!MESSAGE Reconciled 0. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:02.195
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:02.195
+!MESSAGE 5 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:02.196
+!MESSAGE Validated 1. Took 25 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:02.570
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:02.986
+!MESSAGE Reconciled 0. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:03.407
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:03.407
+!MESSAGE 3 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:03.408
+!MESSAGE Validated 1. Took 21 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:08.440
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:08.645
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:09.065
+!MESSAGE Reconciled 0. Took 17 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:09.532
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:09.532
+!MESSAGE 5 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:09.532
+!MESSAGE Validated 1. Took 17 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:14.333
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:14.798
+!MESSAGE Reconciled 0. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:15.217
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:15.217
+!MESSAGE 3 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:15.217
+!MESSAGE Validated 1. Took 18 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:20.752
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:20.768
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-08 15:21:20.768
+!MESSAGE 0 problems reported for /Knoten.java

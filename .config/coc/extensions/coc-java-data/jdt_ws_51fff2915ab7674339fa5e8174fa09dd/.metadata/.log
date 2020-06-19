@@ -1,0 +1,159 @@
+!SESSION 2020-04-04 18:29:36.130 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.6
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/julius/.config/coc/extensions/coc-java-data/jdt_ws_51fff2915ab7674339fa5e8174fa09dd
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:38.683
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:38.875
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:38.898
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:38.899
+!MESSAGE Initializing Java Language Server 0.48.0.201911251822
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:38.912
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:38.912
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.updateSourceAttachment, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:38.923
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:38.962
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:39.073
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:39.962
+!MESSAGE Workspace initialized in 1047ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:40.025
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:40.032
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:40.045
+!MESSAGE >>New configuration: {java={jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=warning}}, configuration={checkProjectSettingsExclusions=true, updateBuildConfiguration=interactive}, trace={server=off}, import={gradle={enabled=true, wrapper={enabled=true}}, maven={enabled=true}, exclusions=[**/node_modules/**, **/.metadata/**, **/archetype-resources/**, **/META-INF/maven/**]}, referencesCodeLens={enabled=false}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true, comments={enabled=true}, onType={enabled=true, fixComment={enabled=true}}}, autobuild={enabled=true}, maxConcurrentBuilds=1.0, completion={enabled=true, overwrite=true, guessMethodArguments=false, favoriteStaticMembers=[org.junit.Assert.*, org.junit.Assume.*, org.junit.jupiter.api.Assertions.*, org.junit.jupiter.api.Assumptions.*, org.junit.jupiter.api.DynamicContainer.*, org.junit.jupiter.api.DynamicTest.*, org.mockito.Mockito.*, org.mockito.ArgumentMatchers.*, org.mockito.Answers.*], importOrder=[java, javax, com, org]}, progressReports={enabled=true}, foldingRange={enabled=true}, maven={downloadSources=false}, codeGeneration={hashCodeEquals={useJava7Objects=false, useInstanceof=false}, useBlocks=false, generateComments=false, toString={template=${object.className} [${member.name()}=${member.value}, ${otherMembers}], codeStyle=STRING_CONCATENATION, skipNullValues=false, listArrayContents=true, limitElements=0.0}}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:40.046
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:40.214
+!MESSAGE Classpath is incomplete. Only syntax errors will be reported for file:///home/julius/Documents/Informatik/Angelina/VerketteteListen/Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:40.899
+!MESSAGE Reconciled 0. Took 161 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:40.970
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:40.970
+!MESSAGE 0 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:40.974
+!MESSAGE Validated 1. Took 43 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:40.992
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:40.994
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:40.995
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:29:40.996
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:30:01.779
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:30:01.781
+!MESSAGE Clearing problems for /Knoten.java
+!SESSION 2020-04-04 18:32:14.269 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.6
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/julius/.config/coc/extensions/coc-java-data/jdt_ws_51fff2915ab7674339fa5e8174fa09dd
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-04 18:32:14.969
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:16.252
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:16.355
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:16.376
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:16.377
+!MESSAGE Initializing Java Language Server 0.48.0.201911251822
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:16.390
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:16.390
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.updateSourceAttachment, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:16.405
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:17.183
+!MESSAGE Workspace initialized in 791ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:17.207
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:17.218
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:17.241
+!MESSAGE >>New configuration: {java={jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=warning}}, configuration={checkProjectSettingsExclusions=true, updateBuildConfiguration=interactive}, trace={server=off}, import={gradle={enabled=true, wrapper={enabled=true}}, maven={enabled=true}, exclusions=[**/node_modules/**, **/.metadata/**, **/archetype-resources/**, **/META-INF/maven/**]}, referencesCodeLens={enabled=false}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true, comments={enabled=true}, onType={enabled=true, fixComment={enabled=true}}}, autobuild={enabled=true}, maxConcurrentBuilds=1.0, completion={enabled=true, overwrite=true, guessMethodArguments=false, favoriteStaticMembers=[org.junit.Assert.*, org.junit.Assume.*, org.junit.jupiter.api.Assertions.*, org.junit.jupiter.api.Assumptions.*, org.junit.jupiter.api.DynamicContainer.*, org.junit.jupiter.api.DynamicTest.*, org.mockito.Mockito.*, org.mockito.ArgumentMatchers.*, org.mockito.Answers.*], importOrder=[java, javax, com, org]}, progressReports={enabled=true}, foldingRange={enabled=true}, maven={downloadSources=false}, codeGeneration={hashCodeEquals={useJava7Objects=false, useInstanceof=false}, useBlocks=false, generateComments=false, toString={template=${object.className} [${member.name()}=${member.value}, ${otherMembers}], codeStyle=STRING_CONCATENATION, skipNullValues=false, listArrayContents=true, limitElements=0.0}}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:17.243
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:17.482
+!MESSAGE Classpath is incomplete. Only syntax errors will be reported for file:///home/julius/Documents/Informatik/Angelina/VerketteteListen/Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:17.482
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:17.484
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:17.486
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:17.488
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:17.964
+!MESSAGE Reconciled 0. Took 48 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:18.503
+!MESSAGE begin problem for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:18.503
+!MESSAGE 0 problems reported for /Knoten.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:32:18.507
+!MESSAGE Validated 1. Took 113 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:33:02.133
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-04 18:33:02.135
+!MESSAGE Clearing problems for /Knoten.java

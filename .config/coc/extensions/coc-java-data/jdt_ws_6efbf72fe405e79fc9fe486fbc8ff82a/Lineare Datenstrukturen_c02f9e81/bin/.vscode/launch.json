@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ListeTest",
+            "request": "launch",
+            "mainClass": "ListeTest",
+            "projectName": "Lineare Datenstrukturen_c02f9e81"
+        }
+    ]
+}
