@@ -18,6 +18,9 @@ alias lsa="ls -A"
 alias ..="cd .."
 alias v=nvim
 alias r=ranger
+alias mpv="devour mpv"
+alias sxiv="devour sxiv"
+alias zathura="devour zathura"
 alias weather="curl v2.wttr.in/${1:-Saarbrücken}\?lang=de --silent | less -S -R -#3"
 
 # get current branch in git repo
