@@ -1,0 +1,4 @@
+URxvt.scrollBar: false
+Xcursor.theme: Google_Cursor
+Sxiv.background : #282828
+Sxiv.foreground : #d65d0e
