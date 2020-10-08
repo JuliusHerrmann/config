@@ -4,6 +4,7 @@ sxhkd &
 udiskie &
 batsignal &
 picom &
+caffeine &
 ./.fehbg &
 ./.config/polybar/launch.sh &
 #Screen lock
