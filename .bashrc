@@ -76,3 +76,5 @@ export PS1="\W\`parse_git_branch\` -> "
 export HISTCONTROL=ignoreboth:erasedups
 # for easy dotfile management
 alias config='/usr/bin/git --git-dir=/home/julius/.cfg/ --work-tree=/home/julius'
+# fix android studio
+export _JAVA_AWT_WM_NONREPARENTING=1

@@ -6,6 +6,8 @@ batsignal &
 picom &
 ./.fehbg &
 ./.config/polybar/launch.sh &
+#Obs camer
+sudo modprobe v4l2loopback devices=1 exclusive_caps=1 &
 #Screen lock
 xset s 600 600 &
 xss-lock lockscreen -l &

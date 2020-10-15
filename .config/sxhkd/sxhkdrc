@@ -155,3 +155,7 @@ super + ctrl + r
 	alacritty -e ranger
 super + ctrl + n
 	pcmanfm
+
+#find cursor for Coder Dojo projects
+super + m
+	find-cursor -s 150 -c red
