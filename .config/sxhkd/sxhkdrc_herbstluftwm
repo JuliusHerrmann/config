@@ -1,0 +1,133 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	alacritty
+
+# program launcher
+super + d
+    ~/.config/rofi/launchers/launcher.sh
+	#rofi -show drun
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd 
+#
+# hwm hotkeys
+#
+
+# quit/restart hwm
+#super + shift + {e,r}
+#	bspc {quit,wm -r}
+super + shift + {e,r,s}
+	prompt {"Exit Herbstluftwm?" "herbstclient quit", "Reload Herbstluftwm?" "herbstclient reload", "Shutdown?" "shutdown now"}
+
+# close and kill
+super + q
+	herbstclient close
+
+#
+# state/flags
+#
+
+# set the window state
+super + {shift + t,s,f, shift + f}
+	herbstclient {pseudotiled toggle,floating toggle,fullscreen toggle,set_attr clients.focus.floating toggle}
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	herbstclient {focus,shift} {left,down,up,right}
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+super + space
+	herbstclient or , and . compare tags.focus.curframe_wcount = 2                   \
+	. cycle_layout +1 vertical horizontal max vertical grid    \
+	, cycle_layout +1
+
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	herbstclient {use_index,move_index} {0-8,9}
+
+
+# Resizing frames
+super + ctrl + {h,j,k,l}
+	herbstclient resize {left,down,up,right}
+
+# Splitting frames
+# create empty frame at specified position
+super + {u,o}
+	herbstclient split {bottom,right} 0.5
+# explode into subframes
+super + ctrl + space
+	bspc node -p cancel
+# remove frame
+super + r
+	herbstclient remove
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# backlight mappings
+XF86MonBrightnessUp
+	xbacklight -inc 1
+XF86MonBrightnessDown
+	xbacklight -dec 1
+# volume mappings
+XF86AudioRaiseVolume
+	pulseaudio-increase-vol.sh
+	#sh -c "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume 0 +5%"
+XF86AudioLowerVolume
+	pulseaudio-decrease-vol.sh
+	#sh -c "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume 0 -5%"
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# bluetooth and network mappings
+super + control + w
+    wifi_setup
+super + control + b
+    btmenu
+super + shift + b
+    btmenu -d
+super + control + e
+    rofi -show emoji -modi emoji
+# start programs
+super + ctrl + f
+	firefox
+super + ctrl + r
+	alacritty -e ranger
+super + ctrl + n
+	pcmanfm
+
+#find cursor for Coder Dojo projects
+super + m
+	find-cursor -s 150 -c red
