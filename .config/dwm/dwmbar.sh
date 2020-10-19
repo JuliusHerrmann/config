@@ -1,30 +1,30 @@
 #!/bin/bash
 function status (){
+	add_spaces "25" "$(printf "%s   %s " "$(date +%H:%M)" "$(date +%d.%m.%y)")"
 	#volume
-	pactl list sinks | grep '^[[:space:]]Volume:' | \
-    head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,'
-	echo "  "
+	if [ "$(pactl list sinks | grep "Mute:" | tail -c 2)" = "o" ]; then
+		add_spaces "9" "$(pactl list sinks | grep '^[[:space:]]Volume:' | \
+			head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,') "
+	else
+		add_spaces "9" "--- "
+	fi
+	#add_spaces "9" "$(pactl list sinks | grep '^[[:space:]]Volume:' | \
+		#head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,') "
+	#echo "  "
 	#cpu
-	echo `top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`"%"
-	echo "/"
-	sensors | grep -A 0 'Package' | cut -c17-23
-	echo "  "
+	#"$(echo `top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`"%") /"
+	#echo "/"
+	add_spaces "18" "$(echo `top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`"%")/$(sensors | grep -A 0 'Package' | cut -c17-23) "
+	#echo "  "
 }
 
-function addClock(){
-	#clock = date +%H:%M
-	#for ((n=0;n<5;n++))
-	#do
-		#clock = "clock "
-	#done
-	#echo "$clock" "$status"
-	printf "%s    %s " "$(date +%H:%M)" "$(date +%d.%m.%y)"
-	#printf '%+192s' "$(status)"
-	printf '%+35s' "$(status)"
+function add_spaces (){
+	printf "%+$1s" "$2"
 }
 
 while true; do
-	xsetroot -name "$(addClock | tr '\n' ' ')"
-	echo "$VAR1"
+	xsetroot -name "$(status | tr '\n' ' ')"
+	#add_spaces "13" "Tealksjdst"
+	#add_spaces "13" "Tie"
 	sleep 2
 done
