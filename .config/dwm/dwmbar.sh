@@ -9,12 +9,6 @@ function status (){
 	echo "/"
 	sensors | grep -A 0 'Package' | cut -c17-23
 	echo "  "
-	#wifi
-	iwgetid -r
-	echo "  "
-	#battery
-	cat /sys/class/power_supply/BAT0/capacity
-	echo ""
 }
 
 function addClock(){
@@ -24,11 +18,13 @@ function addClock(){
 		#clock = "clock "
 	#done
 	#echo "$clock" "$status"
-	printf "%s" "$(date +%H:%M)"
-	printf '%+123s' "$(status)"
+	printf "%s    %s " "$(date +%H:%M)" "$(date +%d.%m.%y)"
+	#printf '%+192s' "$(status)"
+	printf '%+35s' "$(status)"
 }
 
 while true; do
 	xsetroot -name "$(addClock | tr '\n' ' ')"
+	echo "$VAR1"
 	sleep 2
 done
