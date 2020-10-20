@@ -1,4 +1,5 @@
 cd ~
+xrandr --output DP-0 --mode 3440x1440 -r 99.98
 sxhkd -c .config/sxhkd/sxhkdrc_dwm &
 udiskie &
 batsignal &
