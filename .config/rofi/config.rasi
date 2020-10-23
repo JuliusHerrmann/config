@@ -9,3 +9,4 @@ onfiguration {
   columns:            2;
   terminal:           "termite";
 }
+@import "/usr/share/rofi/themes/gruvbox-dark.rasi"
