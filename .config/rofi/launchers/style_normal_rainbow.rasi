@@ -20,13 +20,13 @@ configuration {
 	bw: 0;
     fullscreen: false;
     show-icons: true;
-	terminal: "st";
+	terminal: "termite";
 	sidebar-mode: false;
 }
 
 /* colors */
 * {
-red: #E12834ff;
+red: #EC5250;
 blue: #25B1CA;
 green: #2ABB9C;
 purple: #5537D2;
@@ -34,22 +34,20 @@ white: #ffffff;
 }
 
 // black
-
-* {
-bg: #383838;//#000000ff;
-bg-sel: #E1283499;
-fg: #ffffff;
-}
-
-
-// white
 /*
 * {
-bg: #ffffffd;
-bg-sel: #ffffff4d;
+bg: #00000099;
+bg-sel: #00000066;
 fg: #ffffff;
 }
 */
+
+// white
+* {
+bg: #ffffff4d;
+bg-sel: #ffffff4d;
+fg: #ffffff;
+}
 
 * {
   background-color: #00000000;
@@ -67,7 +65,7 @@ mainbox {
   padding: 0% 0% 0% 0%;
   background-color: @bg;
   border: 0;
-  border-radius: 0;
+  border-radius: 8;
   border-color: @bg;
 }
 
@@ -95,7 +93,7 @@ inputbar {
   children: [entry];
   padding: 4 4 4 4;
   /* change this colors to change style*/
-  background-color: @bg;
+  background-color: @red;
   border: 0 0 0 0;
   border-color: @fg;
 }
