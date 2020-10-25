@@ -18,7 +18,9 @@ function status (){
 	#echo "  "
 	#wifi
 	if [ -n "$(iwgetid -r)" ]; then
-		add_spaces "15" "$(iwgetid -r) "
+		ssid="$(iwgetid -r)"
+		ssidcut=${ssid:0:10}
+		add_spaces "15" "$ssidcut "
 	else
 		add_spaces "15" "No conn. "
 	fi
