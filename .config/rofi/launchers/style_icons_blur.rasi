@@ -22,13 +22,11 @@ configuration {
 }
 
 // black version
-/*
 * {
   bg: #000000;
   ac: #869fa214;
   txt: #d1d5da;
 }
-*/
 
 
 // white version
@@ -41,13 +39,13 @@ configuration {
 */
 
 // blur version
-
+/*
 * {
   bg: #00000066;
   ac: #0000001a;
   txt: #d1d5da;
 }
-
+*/
 
 * {
   background-color: rgba(0,0,0,0);
