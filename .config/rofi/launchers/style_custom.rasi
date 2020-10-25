@@ -48,7 +48,7 @@ configuration {
 }
 
 window {
-  height: 55%;
+  height: 50%;
   width: 40%;
   transparency: "real";
 }

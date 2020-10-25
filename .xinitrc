@@ -55,4 +55,5 @@ fi
 #exec xterm -geometry 80x66+0+0 -name login
 #sxhkd &
 
-exec bspwm
+#exec bspwm
+exec dwm
