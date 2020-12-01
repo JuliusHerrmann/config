@@ -2,7 +2,7 @@ cd ~
 sxhkd -c .config/sxhkd/sxhkdrc_dwm &
 udiskie &
 batsignal &
-picom &
+picom --experimental-backends &
 caffeine &
 ./.fehbg &
 #./.config/polybar/launch.sh &
