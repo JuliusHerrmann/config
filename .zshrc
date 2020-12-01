@@ -36,14 +36,26 @@ unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-export PS1="%~ -> "
+#export PS1="%~ -> "
+export PS1="%1~ -> "
 zstyle ':completion:*' menu select
+# Beam cursor
+echo -ne '\e[5 q'
 
 # cdr to go to recent direcory
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':completion:*:*:cdr:*:*' menu selection
+bindkey -M vicmd '?' history-incremental-search-backward
+bindkey -M vicmd '/' history-incremental-search-forward
 
+function zle-keymap-select {
+	case $KEYMAP in
+		vicmd) echo -ne '\e[1 q';;
+		viins|main) echo -ne '\e[5 q';;
+	esac
+}
+zle -N zle-keymap-select
 # Autohashing
 # Go to arch wiki to find pacman hook
 
