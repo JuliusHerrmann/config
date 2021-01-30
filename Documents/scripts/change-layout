@@ -1,5 +1,6 @@
 #!/bin/bash
-case $1 in
+SELECTION=$(echo -e "de\nneo\nneo qwertz" | rofi -dmenu -i -p "Which Layout?")
+case $SELECTION in
 	"de")
 		setxkbmap de
 		setxkbmap -option caps:escape &

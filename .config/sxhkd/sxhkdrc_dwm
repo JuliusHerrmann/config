@@ -19,6 +19,9 @@ super + Escape
 super + shift + s
 	prompt {"Shutdown?" "shutdown now"}
 
+# select layout 
+super + shift + l
+	change-layout
 # backlight mappings
 XF86MonBrightnessUp
 	xbacklight -inc 1
