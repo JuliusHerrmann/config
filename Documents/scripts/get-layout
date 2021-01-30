@@ -5,17 +5,18 @@ case $LAYOUT in
 		VARIANT=$(setxkbmap -query | grep variant | awk '{ print $NF }')
 		case $VARIANT in
 			"neo")
-				echo "neo"
+				echo " neo"
 				;;
 			"neo_qwertz")
-				echo "neo qwertz"
+				echo " neo qwertz"
 				;;
 			*)
-				echo $LAYOUT
+				echo " $LAYOUT"
 				;;
 		esac
 		;;
 	*)
-		echo $LAYOUT
+		echo " $LAYOUT"
 		;;
 esac
+
