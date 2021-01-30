@@ -1,0 +1,19 @@
+#!/bin/bash
+case $1 in
+	"de")
+		setxkbmap de
+		setxkbmap -option caps:escape &
+		;;
+	"neo")
+		setxkbmap de neo
+		xcape -e 'ISO_Level3_Shift=Escape' -t 200
+		;;
+	"neo_qwertz")
+		setxkbmap de neo_qwertz
+		xcape -e 'ISO_Level3_Shift=Escape' -t 200
+		;;
+	*)
+		echo "Possible inputs: de neo neo_qwertz"
+		;;
+esac
+xset r rate 300 40 &
