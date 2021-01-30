@@ -3,14 +3,22 @@ SELECTION=$(echo -e "de\nneo\nneo qwertz" | rofi -dmenu -i -p "Which Layout?")
 case $SELECTION in
 	"de")
 		setxkbmap de
+		setxkbmap -option
 		setxkbmap -option caps:escape &
 		;;
 	"neo")
 		setxkbmap de neo
+		setxkbmap -option
 		xcape -e 'ISO_Level3_Shift=Escape' -t 200
 		;;
 	"neo_qwertz")
 		setxkbmap de neo_qwertz
+		setxkbmap -option
+		xcape -e 'ISO_Level3_Shift=Escape' -t 200
+		;;
+	"neo qwertz")
+		setxkbmap de neo_qwertz
+		setxkbmap -option
 		xcape -e 'ISO_Level3_Shift=Escape' -t 200
 		;;
 	*)
