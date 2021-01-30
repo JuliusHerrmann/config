@@ -25,6 +25,7 @@ function status (){
 	#echo "/"
 	add_spaces "18" "$(echo `top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`"%")/$(sensors | grep -A 0 'Package' | cut -c17-23) "
 	#echo "  "
+	printf "$(get-layout) "
 }
 
 function add_spaces (){
