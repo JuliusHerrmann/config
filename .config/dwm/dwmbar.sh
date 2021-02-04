@@ -30,22 +30,11 @@ function status (){
 	#battery
 	add_spaces "6" "$(cat /sys/class/power_supply/BAT0/capacity)"
 	#echo ""
+	printf "$(get-layout) "
 }
 
 function add_spaces (){
 	printf "%+$1s" "$2"
-}
-
-function add_Clock(){
-	#clock = date +%H:%M
-	#for ((n=0;n<5;n++))
-	#do
-		#clock = "clock "
-	#done
-	#echo "$clock" "$status"
-	printf "%s    %s " "$(date +%H:%M)" "$(date +%d.%m.%y)"
-	#printf '%+192s' "$(status)"
-	printf '%+55s' "$(status)"
 }
 
 while true; do
