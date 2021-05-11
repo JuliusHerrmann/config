@@ -11,7 +11,7 @@ alias lsa="ls -A"
 alias ..="cd .."
 alias v=nvim
 alias r=ranger
-alias mpv="devour mpv"
+#alias mpv="devour mpv"
 alias sxiv="devour sxiv"
 alias zathura="devour zathura"
 alias weather="curl v2.wttr.in/${1:-Saarbrücken}\?lang=de --silent | less -S -R -#3"
@@ -74,4 +74,8 @@ rehash_precmd() {
 }
 
 add-zsh-hook -Uz precmd rehash_precmd
+# set Firefox as default browser
+#export BROWSER=/usr/bin/firefox
 
+#display a cute cat :)
+fm6000 --cat 
