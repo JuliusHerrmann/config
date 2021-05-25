@@ -46,6 +46,8 @@ super + shift + b
     btmenu -d
 super + control + e
     rofi -show emoji -modi emoji
+super + control + s
+    rofi -show ssh
 # start programs
 super + ctrl + f
 	firefox
