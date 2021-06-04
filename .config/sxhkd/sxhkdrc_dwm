@@ -48,6 +48,8 @@ super + control + e
     rofi -show emoji -modi emoji
 super + control + s
     rofi -show ssh
+super + p
+		rofi-pass
 # start programs
 super + ctrl + f
 	firefox
