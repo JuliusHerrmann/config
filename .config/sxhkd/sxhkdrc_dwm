@@ -46,6 +46,8 @@ super + shift + b
     btmenu -d
 super + control + e
     rofi -show emoji -modi emoji
+super + p
+		rofi-pass
 # start programs
 super + ctrl + f
 	firefox
