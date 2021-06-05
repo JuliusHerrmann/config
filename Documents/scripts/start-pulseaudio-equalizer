@@ -1,0 +1,8 @@
+while ! pulseaudio --check ; do sleep 1; done
+
+while true ; do 
+	while pactl list sinks | grep -q "auto_null"  ; do sleep 1 ; done
+	pulseaudio-equalizer enable &
+	while pactl list sinks | grep -q "LADSPA Plugin Multiband EQ"  ; do sleep 10 ; done 
+	sleep 1
+done
