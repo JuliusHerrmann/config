@@ -5,6 +5,7 @@ udiskie &
 batsignal &
 picom --experimental-backends &
 caffeine &
+redshift -l 49:7 &
 #caffeine-indicator &
 ./.fehbg &
 #./.config/polybar/launch.sh &
@@ -29,6 +30,7 @@ xinput --set-prop "ELAN1300:00 04F3:3057 Touchpad" "Coordinate Transformation Ma
 #set layout to neo_qwertz
 setxkbmap de neo_qwertz
 setxkbmap -option
+xset r rate 300 40 &
 xcape -e 'ISO_Level3_Shift=Escape' -t 200
 
 #Start the bar
