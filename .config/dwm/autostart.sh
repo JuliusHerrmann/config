@@ -12,12 +12,14 @@ xss-lock lockscreen -l &
 #Fix X shaped xursor
 xsetroot -cursor_name left_ptr
 #Touchpad
-xinput --set-prop "ELAN1300:00 04F3:3057 Touchpad" "libinput Accel Speed" -1
-xinput --set-prop "ELAN1300:00 04F3:3057 Touchpad" "libinput Tapping Enabled" 1
-xinput --set-prop "ELAN1300:00 04F3:3057 Touchpad" "libinput Natural Scrolling Enabled" 1
-xinput --set-prop "ELAN1300:00 04F3:3057 Touchpad" "Coordinate Transformation Matrix" 18, 0, 0, 0, 18, 0, 0, 0, 1
+xinput --set-prop "SYNA32A0:00 06CB:CE14 Touchpad" "libinput Accel Speed" -1
+xinput --set-prop "SYNA32A0:00 06CB:CE14 Touchpad" "libinput Tapping Enabled" 1
+xinput --set-prop "SYNA32A0:00 06CB:CE14 Touchpad" "libinput Natural Scrolling Enabled" 1
+xinput --set-prop "SYNA32A0:00 06CB:CE14 Touchpad" "Coordinate Transformation Matrix" 18, 0, 0, 0, 18, 0, 0, 0, 1
 
-setxkbmap -option caps:escape &
+setxkbmap de neo_qwertz
+setxkbmap -option
+xcape -e 'ISO_Level3_Shift=Escape' -t 200
 xset r rate 300 40 &
 
 #Start the bar

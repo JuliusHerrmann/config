@@ -16,7 +16,7 @@ function status (){
 	#cpu
 	#"$(echo `top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`"%") /"
 	#echo "/"
-	add_spaces "18" "$(echo `top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`"%")/$(sensors | grep -A 0 'Package' | cut -c17-23) "
+	add_spaces "18" "$(echo `top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`"%")/$(sensors | grep -A 0 'Tdie' | cut -c16-22) "
 	#echo "  "
 	#wifi
 	if [ -n "$(iwgetid -r)" ]; then
@@ -28,7 +28,7 @@ function status (){
 	fi
 	#echo "  "
 	#battery
-	add_spaces "6" "$(cat /sys/class/power_supply/BAT0/capacity)"
+	add_spaces "6" "$(cat /sys/class/power_supply/BAT1/capacity)"
 	#echo ""
 	printf "$(get-layout) "
 }

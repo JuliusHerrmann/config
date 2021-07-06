@@ -124,9 +124,9 @@ super + {Left,Down,Up,Right}
 
 # backlight mappings
 XF86MonBrightnessUp
-	xbacklight -inc 1
+	xbacklight -inc 5
 XF86MonBrightnessDown
-	xbacklight -dec 1
+	xbacklight -dec 5
 # volume mappings
 XF86AudioRaiseVolume
 	pulseaudio-increase-vol.sh

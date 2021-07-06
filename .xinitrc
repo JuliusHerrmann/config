@@ -14,7 +14,6 @@ if [ -f $sysresources ]; then
 
 
 
-
     xrdb -merge $sysresources
 
 fi
@@ -56,4 +55,6 @@ fi
 #sxhkd &
 
 #exec bspwm
+export MOZ_USE_XINPUT2=1
+export QT_QPA_PLATFORMTHEME=qt5ct
 exec dwm

@@ -37,7 +37,8 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 #export PS1="%~ -> "
-export PS1="%1~ -> "
+#export PS1="%1~ -> "
+export PS1="%1~ 🦥 > "
 zstyle ':completion:*' menu select
 # Beam cursor
 echo -ne '\e[5 q'
