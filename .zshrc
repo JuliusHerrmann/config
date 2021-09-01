@@ -8,9 +8,16 @@ export PATH
 # User specific aliases and functions
 alias ls="ls --color=auto"
 alias lsa="ls -A"
+alias lsc="ls -lah"
 alias ..="cd .."
+alias .2="cd ../.."
+alias .3="cd ../../.."
+alias .4="cd ../../../.."
+alias .5="cd ../../../../.."
 alias v=nvim
 alias r=ranger
+# get external ip
+alias exip='curl ipinfo.io/ip'
 #alias mpv="devour mpv"
 alias sxiv="devour sxiv"
 alias zathura="devour zathura"
