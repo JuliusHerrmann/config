@@ -1,3 +1,4 @@
 #!/usr/bin/bash
+caffeine -d &
 betterlockscreen -l &
 systemctl suspend
