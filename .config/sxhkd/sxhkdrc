@@ -124,9 +124,9 @@ super + {Left,Down,Up,Right}
 
 # backlight mappings
 XF86MonBrightnessUp
-	xbacklight -inc 5
+	xbacklight -inc 10
 XF86MonBrightnessDown
-	xbacklight -dec 5
+	xbacklight -dec 10
 # volume mappings
 XF86AudioRaiseVolume
 	pulseaudio-increase-vol.sh
@@ -136,6 +136,8 @@ XF86AudioLowerVolume
 	#sh -c "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume 0 -5%"
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
+XF86AudioPlay
+	playerctl play-pause
 
 # bluetooth and network mappings
 super + control + w

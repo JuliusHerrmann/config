@@ -9,15 +9,13 @@ super + d
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd 
-#
-# bspwm hotkeys
-#
 
-# quit/restart bspwm
-#super + shift + {e,r}
-#	bspc {quit,wm -r}
+super + alt + l
+  lockscreen
+
 super + shift + s
 	prompt {"Shutdown?" "shutdown now"}
+
 
 # select layout 
 super + shift + l
@@ -36,10 +34,18 @@ XF86AudioLowerVolume
 	#sh -c "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume 0 -5%"
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
-
+XF86AudioPlay
+	playerctl play-pause
+XF86AudioNext
+	playerctl next
+XF86AudioPrev
+	playerctl previous
+XF86AudioMicMute
+	pactl set-source-mute @DEFAULT_SOURCE@ toggle
 # bluetooth and network mappings
 super + control + w
-    wifi_setup
+  networkmanager_dmenu
+#wifi_setup
 super + control + b
     btmenu
 super + shift + b
@@ -48,6 +54,8 @@ super + control + e
     rofi -show emoji -modi emoji
 super + p
 		rofi-pass
+super + c
+		rofi -show calc -modi calc -no-show-match -no-sort
 # start programs
 super + ctrl + f
 	firefox
@@ -55,7 +63,21 @@ super + ctrl + r
 	alacritty -e ranger
 super + ctrl + n
 	pcmanfm
+super + ctrl + p
+	pavucontrol
 
+# dunst management
+ctrl + space
+  dunstctl close
+
+ctrl + space + shift
+  dunstctl history-pop
+
+ctrl + space + alt
+  dunstctl close-all
+
+ctrl + shift + alt + space
+  dunstctl context
 #find cursor for Coder Dojo projects
 super + m
 	find-cursor -s 150 -c red
