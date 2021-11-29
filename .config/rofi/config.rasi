@@ -1,12 +1,4 @@
-onfiguration {
-  show-icons:         true;
-  icon-theme:         "Papirus-Dark";
-  hide-scrollbar:     true;
-  cycle:              false;
-  disable-history:    false;
-  modi:               "drun";
-  display-drun:       "apps";
-  columns:            2;
-  terminal:           "termite";
+configuration {
+	modi: "window,run,ssh,drun";
 }
-@import "/usr/share/rofi/themes/gruvbox-dark.rasi"
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
