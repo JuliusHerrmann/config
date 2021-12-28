@@ -1,7 +1,7 @@
 cd ~
 sxhkd -c .config/sxhkd/sxhkdrc_dwm &
 udiskie &
-batsignal &
+batsignal -n BAT1 &
 picom --experimental-backends &
 caffeine &
 ./.fehbg &
