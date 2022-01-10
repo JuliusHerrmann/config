@@ -42,10 +42,15 @@ XF86AudioPrev
 	playerctl previous
 XF86AudioMicMute
 	pactl set-source-mute @DEFAULT_SOURCE@ toggle
+# screenshots
+Home
+  scrot -s "%Y-%m-%d_$wx$h.png" -e 'xclip -selection clipboard -t image/png -i $f && mv $f ~/Pictures/Screenshots/'
+# for using dragon
+# scrot -s "%Y-%m-%d_$wx$h.png" -e 'dragon $f & disown'
 # bluetooth and network mappings
 super + control + w
   networkmanager_dmenu
-#wifi_setup
+# wifi_setup
 super + control + b
     btmenu
 super + shift + b
@@ -59,6 +64,10 @@ super + c
 # start programs
 super + ctrl + f
 	firefox
+super + ctrl + s
+	spotify
+super + ctrl + d
+	discord
 super + ctrl + r
 	alacritty -e ranger
 super + ctrl + n

@@ -5,6 +5,7 @@ batsignal -n BAT1 &
 picom --experimental-backends &
 caffeine &
 ./.fehbg &
+redshift -l 49:7 &
 #./.config/polybar/launch.sh &
 #Screen lock
 xset s 600 600 &
