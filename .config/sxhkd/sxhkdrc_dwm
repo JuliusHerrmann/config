@@ -20,6 +20,9 @@ super + shift + s
 # select layout 
 super + shift + l
 	change-layout
+# select autorandr settings 
+super + shift + a
+  change-randr
 # backlight mappings
 XF86MonBrightnessUp
 	xbacklight -inc 1

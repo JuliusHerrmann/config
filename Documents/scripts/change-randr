@@ -1,0 +1,16 @@
+#!/bin/bash
+SELECTION=$(echo -e "Mobile\nDual\nDocked" | rofi -dmenu -i -p "Which layout?")
+case $SELECTION in
+	"Mobile")
+    autorandr --load mobile
+		;;
+	"Dual")
+    autorandr --load mobileDual
+		;;
+	"Docked")
+    autorandr --load docked
+		;;
+	*)
+		echo "Possible inputs: Mobile Dual Docked"
+		;;
+esac
