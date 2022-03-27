@@ -96,14 +96,14 @@ font:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
+    #family: RedHatMono
     family: SauceCodePro Nerd Font
-    #family: Source Code Pro
 
     # The `style` can be specified to pick a specific face.
     style: medium
 
   # Bold font face
-  #bold:
+  bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
@@ -111,10 +111,10 @@ font:
     #family: monospace
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    style: Bold
 
   # Italic font face
-  #italic:
+  italic:
     # Font family
     #
     # If the italic family is not specified, it will fall back to the
@@ -122,9 +122,10 @@ font:
     #family: monospace
 
     # The `style` can be specified to pick a specific face.
-    #style: Italic
+    style: medium Italic
 
   # Point size
+  #size: 7.5
   size: 8.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
