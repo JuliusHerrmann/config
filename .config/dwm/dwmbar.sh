@@ -16,7 +16,7 @@ function status (){
 	#cpu
 	#"$(echo `top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`"%") /"
 	#echo "/"
-	add_spaces "18" "$(echo `top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`"%")/$(sensors | grep -A 0 'Tdie' | cut -c16-22) "
+	add_spaces "18" "$(echo `top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`"%")/$(sensors | grep -A 0 'Tctl' | cut -c16-22) "
 	#echo "  "
 	#wifi
 	if [ -n "$(iwgetid -r)" ]; then

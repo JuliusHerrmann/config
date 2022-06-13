@@ -1,12 +1,12 @@
-
 # User specific environment
 typeset -U PATH path
 PATH="$HOME/.local/bin:$HOME/bin:$PATH:/home/julius/Flutter/flutter/bin"
-export PATH="$HOME/.symfony/bin:$PATH"
+export PATH="$HOME/Documents/scripts:$HOME/.symfony/bin:$PATH"
 export PATH
 
 # User specific aliases and functions
 alias ls="ls --color=auto"
+alias ip="ip -c"
 alias lsa="ls -A"
 alias lsc="ls -lah"
 alias ..="cd .."
@@ -18,13 +18,14 @@ alias v=nvim
 alias r=ranger
 # get external ip
 alias exip='curl ipinfo.io/ip'
-#alias mpv="devour mpv"
+alias mpv="devour mpv"
 alias sxiv="devour sxiv"
 alias zathura="devour zathura"
 alias weather="curl v2.wttr.in/${1:-Saarbrücken}\?lang=de --silent | less -S -R -#3"
 alias sx="startx"
 alias sudo="sudo "
 alias tablet="sudo python ~/Documents/reMarkable/rmTabletDriver/tabletDriver.py remarkable"
+alias clip="xclip -selection clipboard"
 # the only really needed alias
 alias 🤌="sudo "
 # for easy dotfile management
@@ -66,14 +67,15 @@ bindkey -M vicmd '/' history-incremental-search-forward
 bindkey -v
 export KEYTIMEOUT=1
 function zle-keymap-select zle-line-init {
-	case $KEYMAP in
-		vicmd) echo -ne '\e[1 q';;
-		viins|main) echo -ne '\e[5 q';;
-	esac
-	zle reset-prompt
+  case $KEYMAP in
+    vicmd) echo -ne '\e[1 q';;
+    viins|main) echo -ne '\e[5 q';;
+  esac
+  zle reset-prompt
 }
 zle -N zle-keymap-select
 zle -N zle-line-init
+
 # Autohashing
 # Go to arch wiki to find pacman hook
 
@@ -97,3 +99,6 @@ add-zsh-hook -Uz precmd rehash_precmd
 
 #display a cute cat :)
 fm6000 --cat 
+#load better vim mode
+#source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+#export KEYTIMEOUT=1

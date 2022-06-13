@@ -15,5 +15,6 @@
 # style_normal_rainbow_sidebar
 
 style="style_custom"
+#style="blurry"
 
 rofi -no-lazy-grab -show drun -theme launchers/"$style".rasi

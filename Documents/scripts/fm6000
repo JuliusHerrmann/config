@@ -61,7 +61,7 @@ sub get_de {
     unless ($de) { $de = $ENV{XDG_SESSION_DESKTOP} }
     unless ($de) { $de = $ENV{DESKTOP_SESSION} }
     #unless ($de) { $de = "Unknown" }
-		unless ($de) { $de = "dwm" }
+    unless ($de) { $de = "dwm" }
     return $de;
 }
 

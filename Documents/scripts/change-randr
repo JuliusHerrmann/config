@@ -5,7 +5,7 @@ case $SELECTION in
     autorandr --load mobile
 		;;
 	"Dual")
-    autorandr --load mobileDual
+    autorandr --load dual
 		;;
 	"Docked")
     autorandr --load docked

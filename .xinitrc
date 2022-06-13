@@ -54,7 +54,8 @@ fi
 #exec xterm -geometry 80x66+0+0 -name login
 #sxhkd &
 
-#exec bspwm
+#fix java
+export _JAVA_AWT_WM_NONREPARENTING=1
 export MOZ_USE_XINPUT2=1
 export QT_QPA_PLATFORMTHEME=qt5ct
 exec dwm
