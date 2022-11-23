@@ -1,4 +1,7 @@
 configuration {
 	modi: "window,run,ssh,drun";
 }
+//@theme "/home/julius/.config/rofi/themes/rosepine.rasi"
+//@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+//@theme "/home/julius/.config/rofi/themes/rosepine.rasi"
 @theme "/usr/share/rofi/themes/gruvbox-dark.rasi"

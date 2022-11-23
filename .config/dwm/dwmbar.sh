@@ -28,7 +28,11 @@ function status (){
 	fi
 	#echo "  "
 	#battery
-	add_spaces "6" "$(cat /sys/class/power_supply/BAT1/capacity)"
+    if [ "$(cat /sys/class/power_supply/BAT1/status)" = "Charging" ]; then
+	    add_spaces "7" "$(cat /sys/class/power_supply/BAT1/capacity)+"
+    else
+	    add_spaces "7" "$(cat /sys/class/power_supply/BAT1/capacity)-"
+    fi
 	#echo ""
 	printf "$(get-layout) "
 }
