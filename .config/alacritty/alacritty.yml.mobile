@@ -159,48 +159,51 @@ font:
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
+import:
+  # uncomment the flavour you want below:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
 
-colors: #rose pine
-  primary:
-    background: "0x191724"
-    foreground: "0xe0def4"
-  cursor:
-    text: "0xe0def4"
-    cursor: "0x524f67"
-  vi_mode_cursor:
-    text: "0xe0def4"
-    cursor: "0x524f67"
-  line_indicator:
-    foreground: None
-    background: None
-  selection:
-    text: "0xe0def4"
-    background: "0x403d52"
-  normal:
-    black: "0x26233a"
-    red: "0xeb6f92"
-    green: "0x31748f"
-    yellow: "0xf6c177"
-    blue: "0x9ccfd8"
-    magenta: "0xc4a7e7"
-    cyan: "0xebbcba"
-    white: "0xe0def4"
-  bright:
-    black: "0x6e6a86"
-    red: "0xeb6f92"
-    green: "0x31748f"
-    yellow: "0xf6c177"
-    blue: "0x9ccfd8"
-    magenta: "0xc4a7e7"
-    cyan: "0xebbcba"
-    white: "0xe0def4"
-  hints:
-    start:
-      foreground: "#908caa"
-      background: "#1f1d2e"
-    end:
-      foreground: "#6e6a86"
-      background: "#1f1d2e"
+# colors: #rose pine
+#   primary:
+#     background: "0x191724"
+#     foreground: "0xe0def4"
+#   cursor:
+#     text: "0xe0def4"
+#     cursor: "0x524f67"
+#   vi_mode_cursor:
+#     text: "0xe0def4"
+#     cursor: "0x524f67"
+#   line_indicator:
+#     foreground: None
+#     background: None
+#   selection:
+#     text: "0xe0def4"
+#     background: "0x403d52"
+#   normal:
+#     black: "0x26233a"
+#     red: "0xeb6f92"
+#     green: "0x31748f"
+#     yellow: "0xf6c177"
+#     blue: "0x9ccfd8"
+#     magenta: "0xc4a7e7"
+#     cyan: "0xebbcba"
+#     white: "0xe0def4"
+#   bright:
+#     black: "0x6e6a86"
+#     red: "0xeb6f92"
+#     green: "0x31748f"
+#     yellow: "0xf6c177"
+#     blue: "0x9ccfd8"
+#     magenta: "0xc4a7e7"
+#     cyan: "0xebbcba"
+#     white: "0xe0def4"
+#   hints:
+#     start:
+#       foreground: "#908caa"
+#       background: "#1f1d2e"
+#     end:
+#       foreground: "#6e6a86"
+#       background: "#1f1d2e"
 # Colors (Gruvbox dark)
 # colors:
 #   # Default colors
@@ -254,7 +257,7 @@ colors: #rose pine
   # Example:
   #   `- { index: 16, color: '0xff00ff' }`
   #
-  indexed_colors: []
+  # indexed_colors: []
 
 # Visual Bell
 #
@@ -395,9 +398,6 @@ working_directory: None
 # Alacritty will fall back to the WinPTY automatically if the ConPTY
 # backend cannot be initialized.
 enable_experimental_conpty_backend: false
-
-# Send ESC (\x1b) before characters when alt is pressed.
-alt_send_esc: true
 
 debug:
   # Display the time it takes to redraw each frame.
