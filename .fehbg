@@ -1,3 +1,4 @@
 #!/bin/sh
+feh --no-fehbg --bg-scale '/home/julius/Pictures/Wallpapers/daniel-sessler-l-XiTqV2BkA-unsplash_widescreen.jpg' '/home/julius/Pictures/Wallpapers/daniel-sessler-l-XiTqV2BkA-unsplash.jpg' 
 #feh --no-fehbg --bg-scale '/home/julius/Pictures/Wallpapers/nahil-naseer-xljtGZ2-P3Y-unsplash_widescreen.jpg' '/home/julius/Pictures/Wallpapers/nahil-naseer-xljtGZ2-P3Y-unsplash.jpg' 
-feh --no-fehbg --bg-scale '/home/julius/Pictures/Wallpapers/mick-haupt-ehMNP0Ooj3M-unsplash.jpg'
+# feh --no-fehbg --bg-scale '/home/julius/Pictures/Wallpapers/mick-haupt-ehMNP0Ooj3M-unsplash.jpg'
