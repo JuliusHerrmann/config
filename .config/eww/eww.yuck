@@ -1,0 +1,257 @@
+;; put path to aesthetic bar config files here ;;
+(defvar eww "$HOME/.local/bin/eww -c $HOME/.config/eww/bar")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;							Widget Section's							 ;;	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Workspaces Widgets ;;
+(defwidget workspaces []
+	(literal :content workspace))
+(deflisten workspace "scripts/workspaces")
+
+;; Battery Widgets ;;
+(defwidget bat []
+	(box	:orientation "v"	
+			:space-evenly "false"
+	(label	:class "bat"		
+			:halign "center"		
+			:text battery	
+            :justify: "center"
+			:tooltip {EWW_BATTERY.BAT1.status})
+    (label  :class "bat-percent"
+            :justify: "center"
+            :halign "center"
+			:tooltip {EWW_BATTERY.BAT1.status}
+            :text {substring("${EWW_BATTERY.BAT1.capacity}%", 0, 3)})))
+(defpoll battery			:interval "10s"	"scripts/battery icon")
+
+;; Wifi Widgets ;;
+(defwidget wifi []
+	(box		:orientation "v"  
+				:tooltip wifi-name
+	(button		:onclick "scripts/popup wifi" 
+				:class "wifi-icon" wifi-icon)))
+(defpoll wifi-icon :interval "1s" "scripts/wifi icon")
+(defpoll wifi-name :interval "1s" "scripts/wifi name")
+
+;; CPU Widgets ;;
+(defwidget cpu []
+	(box		:orientation "v"  
+	(button		:class "cpu-icon" "")
+    (label  :class "cpu-percent"
+            :justify: "center"
+            :halign "center"
+            :text {substring("${ round(EWW_CPU.avg, 0) }%", 0, 4)})))
+
+;; temp Widgets ;;
+(defwidget temp []
+	(box		:orientation "v"  
+	(button		:class "temp-icon" "󰔄")
+    (label  :class "temp-val"
+            :justify: "center"
+            :halign "center"
+            :text "${round(EWW_TEMPS.K10TEMP_TCTL, 0)}°")))
+
+;; Brightness Widgets ;;
+;; (defwidget bright []
+;;   (eventbox :onhover "${eww} update bright=true"   
+;;   			:onhoverlost "${eww} update bright=false"
+;;   			(box    :orientation "v"  
+;; 			  		:space-evenly "false"  
+;; 					:spacing 2
+;;   			(revealer :transition "slideup" 
+;; 			  		  :reveal bright   
+;; 					  :duration "550ms"
+;;   			(scale :class "bribar" 
+;; 			  	   :value current-brightness 
+;; 				   :tooltip "Brightness: ${current-brightness}%" 
+;; 				   :onchange "brightnessctl set {}%" 
+;; 				   :orientation "v" 
+;; 				   :flipped true 
+;; 				   :max 101 
+;; 				   :min 0))
+;;   			(label :class "brightness-icon" 
+;; 			  	   :text ""))))
+;; (defpoll current-brightness :interval "1s" "$(xbacklight -get)%")
+;; (defvar bright false)
+
+;; Volume Widgets ;;
+(defwidget volum []
+	(eventbox :onhover "${eww} update volum=true" 		
+			  :onhoverlost "${eww} update volum=false"
+	(box      :orientation "v" 	  
+			  :space-evenly "false" 
+			  :spacing "2"
+	(revealer :transition "slideup" 
+			  :reveal volum         
+			  :duration "550ms"
+	(scale    :class "volbar" 	  
+			  :value current-volume 
+			  :orientation "v"      
+			  :flipped true 
+			  :tooltip "Volume: ${current-volume}%" 
+			  :max 101 
+			  :min 0 
+			  :onchange "amixer -D pulse sset Master {}%" ))
+	(button   :onclick "scripts/popup audio"   :class "volume-icon" ""))))
+;; (defpoll current-volume :interval "1s" "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+(defpoll current-volume :interval "5s" "echo 100")
+(defvar volum false)
+
+;; Control Panel Widgets ;;	
+(defwidget control []
+	(box :orientation "v" 
+		 :space-evenly false  
+		 :class "control"
+(wifi)
+(volum)
+(bat)
+(cpu)
+(temp)
+;; (bright)
+))
+
+;; BELOW USES BUTTONS
+;; ;; Clock Widgets ;;
+;; (defwidget time []
+;; 	(box	:orientation "v" 
+;; 			:class "time" 
+;; 			:valign "end"
+;; 	(button	:onclick "scripts/popup calendar"	
+;; 			:class "time-hour" hour)
+;; 	(button	:onclick "scripts/popup calendar"	
+;; 			:class "time-min"  min)
+;;     (label  :text "")
+;; 	(button	:onclick "scripts/popup calendar"	
+;; 			:class "time-hour" hour)
+;; 	(button	:onclick "scripts/popup calendar"	
+;; 			:class "time-min"  min)
+;; 	(button	:onclick "scripts/popup calendar"	
+;; 			:class "time-min"  min)
+;;     ))
+;; (defpoll hour	:interval "1s"	"date '+%H'")
+;; (defpoll min	:interval "1s"	"date '+%M'")
+
+;; Clock Widgets ;;
+(defwidget time []
+	(box	:orientation "v" 
+			:class "time" 
+			:valign "center"
+	(label	:text "󰥔"
+            :valign "center"
+			:valign "center"
+			:class "time-icon")
+	(label	:text hour
+			:valign "center"
+			:class "time-hour")
+	(label	:text min
+			:class "time-min")
+    (label  :text ""
+			:valign "center"
+            :class "date-icon")
+	(label	:text day-month
+			:valign "center"
+			:class "date-dm")
+	(label	:text year
+			:valign "center"
+			:class "date-year")
+    ))
+(defpoll hour	:interval "1s"	"date '+%H'")
+(defpoll min	:interval "1s"	"date '+%M'")
+(defpoll day-month	:interval "5m"	"date '+%d.%m'")
+(defpoll year	:interval "24h"	"date '+%Y'")
+
+;; ;; Calendar Widgets ;;
+;; (defwidget cal []
+;; 	(box :class "cal-box" 
+;; 		 :orientation "v"
+;; 	(box :class "cal-inner-box"
+;; 	(calendar :class "cal" 
+;; 			  :day calendar_day 
+;; 			  :month calendar_month 
+;; 			  :year calendar_year))))
+;; (defpoll calendar_day :interval "10h"
+;;     "date '+%d'")
+;; (defpoll calendar_month :interval "10h"
+;;     "scripts/calendar")
+;; (defpoll calendar_year :interval "10h"
+;;     "date '+%Y'")
+
+
+
+;; Top Widgets ;;
+(defwidget top []
+	(box	:orientation "v" 
+			:space-evenly "false" 
+			:valign "start" 
+(control)))
+
+;; middle Widgets ;;
+(defwidget middle []
+	(box	:orientation "v" 
+			:space-evenly "false" 
+			:valign "start" 
+(workspaces)))
+
+;; Bottom Widgets ;;
+(defwidget bottom []
+	(box	:orientation "v" 
+			:space-evenly false 
+(time)))
+
+;; End Widgets ;;
+(defwidget end []
+	(box :orientation "v" 
+		 :space-evenly "false" 
+		 :valign "end" 
+		 :spacing 5
+(time)
+;; (bottom)
+))
+
+;; Bar Widgets ;;
+(defwidget bar []
+	(box :class "eww_bar" 
+		 :orientation "v" 
+		 :vexpand "false" 
+		 :hexpand "false"
+(top)
+(middle)
+(end)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;							Window Section's							 ;;	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Bar Windows ;;
+(defwindow bar
+	:geometry (geometry :x "0" 
+						:y "0" 
+						:height "100%" 
+						:width "47px")
+	:monitor 0
+    :exclusive true
+	:hexpand "false"
+	:vexpand "false"
+(bar))
+
+;; Bar Windows ;;
+(defwindow bar2
+	:geometry (geometry :x "0" 
+						:y "0" 
+						:height "100%" 
+						:width "47px")
+	:monitor 1
+    :exclusive true
+	:hexpand "false"
+	:vexpand "false"
+(bar))
+
+;; ;; Calendar Windows ;;
+;; (defwindow calendar
+;;     :monitor 0
+;; 	:geometry (geometry :x "70px" 
+;; 						:y "65%" 
+;; 						:width "270px" 
+;; 						:height "60px")
+;; (cal))

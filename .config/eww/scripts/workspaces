@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+
+get_button () {
+
+    if [ $active -eq $button_nr ]; then
+        icon=""
+    else 
+        icon=""
+    fi
+
+    echo "(button :onclick \"hyprctl dispatch workspace $button_nr\"	:class	\"workspace_button\"	\"$icon\")"
+}
+
+generate () {
+    active="$(hyprctl monitors -j | jq '.[] | select(.focused) | .activeWorkspace.id')"
+
+    # Check if something has changed
+    if [ "$old_active" = "$active" ]; then
+        echo $old && return;
+    else
+        button_nr=1
+        button_1="$(get_button)"
+        button_nr=2
+        button_2="$(get_button)"
+        button_nr=3
+        button_3="$(get_button)"
+        button_nr=4
+        button_4="$(get_button)"
+        button_nr=5
+        button_5="$(get_button)"
+        button_nr=6
+        button_6="$(get_button)"
+        button_nr=7
+        button_7="$(get_button)"
+        button_nr=8
+        button_8="$(get_button)"
+        button_nr=9
+        button_9="$(get_button)"
+        button_nr=10
+        button_10="$(get_button)"
+
+        old_active=$active
+        old="(box	:class \"works\" :orientation \"v\"	:halign \"center\"	:valign \"start\"	 :space-evenly \"true\" :spacing \"5\" $button_1 $button_2 $button_3 $button_4 $button_5 $button_6 $button_7 $button_8 $button_9 $button_10)"
+
+        echo $old
+    fi
+    
+}
+old_active="0"
+old=""
+
+generate
+socat -u UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - | while read -r line; do
+	generate
+done
