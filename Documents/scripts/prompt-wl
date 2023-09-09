@@ -1,0 +1,5 @@
+#For example:
+# './prompt "Shutdown?" "shutdown -h now'
+
+[ $(echo -e "No\nYes" | tofi --prompt-text $1) == "Yes" ] && $2
+
