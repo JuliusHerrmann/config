@@ -188,9 +188,9 @@ sub get_info {
         $de_placeholder = 'WM';
     }
 
-    if ($de ~~ @wm) {
-        $de_placeholder = 'WM';
-    }
+    # if ($de ~~ @wm) {
+    #     $de_placeholder = 'WM';
+    # }
 
     if ($vnstat eq '') {
         $vnstat = usage();
