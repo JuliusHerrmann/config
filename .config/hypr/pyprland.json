@@ -1,0 +1,31 @@
+{
+  "pyprland": {
+    "plugins": [
+      "scratchpads",
+      "monitors",
+      "workspaces_follow_focus"
+    ]
+  },
+  "scratchpads": {
+    "term": {
+      "command": "alacritty --class alacritty-scratch",
+      "animation": "",
+      "lazy": "false",
+      "unfocus": "false"
+    },
+    "volume": {
+      "command": "pavucontrol --name=pavu-scratch",
+      "animation": "",
+      "unfocus": "false",
+      "lazy": "false"
+    }
+  },
+  "monitors": {
+    "placement": {
+      "BenQ PJ": {
+        "topOf": "eDP-1"
+      }
+    },
+    "unknown": "wlrlui"
+  }
+}
