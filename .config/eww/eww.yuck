@@ -5,10 +5,30 @@
 ;;							Widget Section's							 ;;	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; ;; Workspaces Widgets ;;
+;; (defwidget workspaces []
+;; 	(literal :content workspace))
+;; (deflisten workspace "scripts/workspaces")
+
+(deflisten workspace_mon0 :initial  "1" "bash scripts/get-active-workspace 0")
+(deflisten workspace_mon1 :initial  "1" "bash scripts/get-active-workspace 1")
+(deflisten workspace_numbers :initial '[{"id":"1","windows":0},{"id":"2","windows":0},{"id":"3","windows":0},{"id":"4","windows":0},{"id":"5","windows":0},{"id":"6","windows":0},{"id":"7","windows":0},{"id":"8","windows":0},{"id":"9","windows":0},{"id":"10","windows":0}]' "bash scripts/get-workspaces")
 ;; Workspaces Widgets ;;
-(defwidget workspaces []
-	(literal :content workspace))
-(deflisten workspace "scripts/workspaces")
+(defwidget workspaces [monitor]
+	(box	:orientation "v"	
+            :class "works"
+            :halign "center"
+            :valign "center"
+            :space-evenly "true"
+            :spacing "5"
+     (for current in workspace_numbers
+      (button   :class "workspace_button ${current.windows > 0 ? "workspace_occupied" : "workspace_empty"}"
+                :onclick "hyprctl dispatch workspace ${current.id}"
+                {monitor == 0 ? (workspace_mon0 == current.id ? "" : "") : (workspace_mon1 == current.id ? "" : "")})
+     ) 
+	))
+
+
 
 ;; Battery Widgets ;;
 (defwidget bat []
@@ -42,14 +62,13 @@
     (label  :class "cpu-percent"
             :justify: "center"
             :halign "center"
-            :text {substring("${ round(EWW_CPU.avg, 0) }%", 0, 4)})))
+            :text {substring("${ round(EWW_CPU.avg, 0) }%", 0, 3)})))
 
 ;; temp Widgets ;;
 (defwidget temp []
 	(box		:orientation "v"  
 	(button		:class "temp-icon" "󰔄")
     (label  :class "temp-val"
-            :justify: "center"
             :halign "center"
             :text "${round(EWW_TEMPS.K10TEMP_TCTL, 0)}°")))
 
@@ -76,28 +95,42 @@
 ;; (defpoll current-brightness :interval "1s" "$(xbacklight -get)%")
 ;; (defvar bright false)
 
+;; ;; Volume Widgets ;;
+;; (defwidget volume []
+;; 	(eventbox :onhover "${eww} update volum=true" 		
+;; 			  :onhoverlost "${eww} update volum=false"
+;; 	(box      :orientation "v" 	  
+;; 			  :space-evenly "false" 
+;; 			  :spacing "2"
+;; 	(revealer :transition "slideup" 
+;; 			  :reveal volum         
+;; 			  :duration "550ms"
+;; 	(scale    :class "volbar" 	  
+;; 			  :value current-volume 
+;; 			  :orientation "v"      
+;; 			  :flipped true 
+;; 			  :tooltip "Volume: ${current-volume}%" 
+;; 			  :max 101 
+;; 			  :min 0 
+;; 			  :onchange "amixer -D pulse sset Master {}%" ))
+;; 	(button   :onclick volum="true"   :class "volume-icon" ""))))
+;; 	(button   :onclick "scripts/popup audio"   :class "volume-icon" ""))))
+;; ;; (defpoll current-volume :interval "1s" "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+;; (defpoll current-volume :interval "5s" "echo 100")
+;; (defvar volum false)
+
 ;; Volume Widgets ;;
-(defwidget volum []
-	(eventbox :onhover "${eww} update volum=true" 		
-			  :onhoverlost "${eww} update volum=false"
-	(box      :orientation "v" 	  
-			  :space-evenly "false" 
-			  :spacing "2"
-	(revealer :transition "slideup" 
-			  :reveal volum         
-			  :duration "550ms"
-	(scale    :class "volbar" 	  
-			  :value current-volume 
-			  :orientation "v"      
-			  :flipped true 
-			  :tooltip "Volume: ${current-volume}%" 
-			  :max 101 
-			  :min 0 
-			  :onchange "amixer -D pulse sset Master {}%" ))
-	(button   :onclick "scripts/popup audio"   :class "volume-icon" ""))))
-;; (defpoll current-volume :interval "1s" "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
-(defpoll current-volume :interval "5s" "echo 100")
-(defvar volum false)
+(defwidget volume []
+	(box		:orientation "v"  
+     (button	:tooltip current-volume	
+                :class "volume-icon"
+                {current-volume != 0 ? "󰕾" : "󰖁"})
+    (label  :class "volume-val"
+            :justify: "center"
+            :halign "center"
+            :text {substring("${current-volume}%", 0, 3)})))
+(defpoll current-volume :interval "5s" "scripts/volume")
+
 
 ;; Control Panel Widgets ;;	
 (defwidget control []
@@ -105,7 +138,7 @@
 		 :space-evenly false  
 		 :class "control"
 (wifi)
-(volum)
+(volume)
 (bat)
 (cpu)
 (temp)
@@ -188,16 +221,17 @@
 (control)))
 
 ;; middle Widgets ;;
-(defwidget middle []
+(defwidget middle [monitor]
 	(box	:orientation "v" 
 			:space-evenly "false" 
 			:valign "start" 
-(workspaces)))
+(workspaces :monitor {monitor})))
 
 ;; Bottom Widgets ;;
 (defwidget bottom []
 	(box	:orientation "v" 
 			:space-evenly false 
+
 (time)))
 
 ;; End Widgets ;;
@@ -206,18 +240,20 @@
 		 :space-evenly "false" 
 		 :valign "end" 
 		 :spacing 5
+(systray :pack-direction "ttb")
 (time)
 ;; (bottom)
 ))
 
 ;; Bar Widgets ;;
-(defwidget bar []
+(defwidget bar [monitor]
 	(box :class "eww_bar" 
 		 :orientation "v" 
 		 :vexpand "false" 
 		 :hexpand "false"
 (top)
-(middle)
+(middle :monitor {monitor})
+;; (systray :pack-direction "ttb")
 (end)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -231,9 +267,10 @@
 						:width "47px")
 	:monitor 0
     :exclusive true
+    :stacking "fg"
 	:hexpand "false"
 	:vexpand "false"
-(bar))
+(bar :monitor 0))
 
 ;; Bar Windows ;;
 (defwindow bar2
@@ -243,9 +280,10 @@
 						:width "47px")
 	:monitor 1
     :exclusive true
+    :stacking "fg"
 	:hexpand "false"
 	:vexpand "false"
-(bar))
+(bar :monitor 1))
 
 ;; ;; Calendar Windows ;;
 ;; (defwindow calendar

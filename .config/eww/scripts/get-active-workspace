@@ -1,6 +1,29 @@
 #!/usr/bin/env bash
 
-hyprctl monitors -j | jq '.[] | select(.focused) | .activeWorkspace.id'
+# hyprctl monitors -j  | jq '.[] | select(.focused) | .activeWorkspace.id'
+# hyprctl monitors -j  | jq --arg mon_id 1 '.[] | select(.id == ($mon_id|fromjson)) | .activeWorkspace.id'
+desired_mon=$1
+focused_mon=1
 
-socat -u UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - |
-  stdbuf -o0 awk -F '>>|,' -e '/^workspace>>/ {print $2}' -e '/^focusedmon>>/ {print $3}'
+update () {
+    focused_mon_new="$(echo $line | awk -F '>>|,' -e '/^focusedmon>>/ {print $3}')"
+    if [ -n "$focused_mon_new" ]; then
+        focused_mon=$focused_mon_new
+        echo "monitor: $focused_mon"
+    fi
+    # echo "$focused_mon vs. $desired_mon"
+    if [ "$focused_mon" -eq "$desired_mon" ]; then
+        # echo "updating"
+        #echo $line | awk -F '>>|,' -e '/^workspace>>/ {print $2}'
+        echo $line | awk -F '>>|,' -e '/^workspace>>/ {print $2}'
+    fi
+}
+
+socat -u UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - | while read -r line; do
+if [ -n "$(echo $line | awk -F '>>|,' -e '/^workspace>>/ {print $2}')" ]; then
+    hyprctl monitors -j  | jq --arg mon_id $desired_mon '.[] | select(.id == ($mon_id|fromjson)) | .activeWorkspace.id'
+fi
+done
+
+# socat -u UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - |
+#   stdbuf -o0 awk -F '>>|,' -e '/^workspace>>/ {print $2}' -e '/^focusedmon>>/ {print $3}'

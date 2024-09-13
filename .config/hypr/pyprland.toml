@@ -1,0 +1,30 @@
+[pyprland]
+plugins = ["scratchpads"]
+
+[scratchpads.term]
+command = "alacritty --class alacritty-scratch"
+animation = ""
+lazy = false
+unfocus = false
+size = "70% 70%"
+position = "15% 15%"
+excludes = "*"
+
+[scratchpads.calc]
+command = "alacritty --class alacritty-kalker -e kalker"
+animation = ""
+lazy = false
+unfocus = false
+size = "70% 70%"
+position = "15% 15%"
+excludes = "*"
+
+[scratchpads.volume]
+# command = "pavucontrol --name=pavu-scratch"
+command = "pavucontrol"
+animation = ""
+lazy = true
+unfocus = false
+size = "70% 70%"
+position = "15% 15%"
+excludes = "*"

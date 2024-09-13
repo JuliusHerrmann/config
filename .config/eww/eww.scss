@@ -29,6 +29,8 @@ $cpu: #eba0ac;
 $temp: #fab387;
 $time: #cba6f7;
 $date: #f2cdcd;
+$occupied: #cdd6f4;
+$empty: #7f849c;
 
 // EWW BAR
 .eww_bar{
@@ -41,12 +43,20 @@ $date: #f2cdcd;
 .works {
     font-family: "Font Awesome 6 Pro";
     // padding: .2rem .9rem .2rem .7rem;
+    font-size: 1rem;
     padding: 1rem 1rem 1rem 1rem;
+    margin-top: 10px;
     background-color: $black;
     border-radius: 8px;
 }
 .workspace_button {
     padding-right: 0.28rem;
+}
+.workspace_occupied {
+    color: $occupied;
+}
+.workspace_empty {
+    color: $empty;
 }
 
 // .0 , .01, .02, .03, .04, .05, .06,
@@ -121,6 +131,7 @@ $date: #f2cdcd;
   font-family: JetBrainsMono Nerd Font;
   font-size: 1.2em;
   color: $bat;
+  margin-top: -1.2rem;
 }
 .bat-percent{
   font-family: JetBrainsMono Nerd Font;
@@ -158,7 +169,13 @@ $date: #f2cdcd;
   color: $yellow;
 }
 .volume-icon{
-  margin: .2rem 0 .2rem 0;
+  margin: 0rem 0.2rem 0rem 0;
+  color: $vol;
+}
+.volume-val{
+  font-family: JetBrainsMono Nerd Font;
+  margin: -1rem 0 0.2rem 0;
+  font-size: 0.5em;
   color: $vol;
 }
 scale trough {
@@ -180,7 +197,7 @@ scale trough {
 
 // Clock
 .time {
-  font-family: Comic Mono;
+  font-family: "Comic mono";
   font-weight: bold;
   font-size: 1.2em;
   background-color: $black;
@@ -206,14 +223,12 @@ scale trough {
   color: $date;
 }
 .date-dm {
-  font-family: Comic Mono;
   font-weight: bold;
   font-size: .6em;
   margin-bottom: -1rem;
   color: $date;
 }
 .date-year {
-  font-family: Comic Mono;
   font-size: .6em;
   color: $date;
 }
