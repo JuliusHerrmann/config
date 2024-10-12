@@ -21,7 +21,7 @@ excludes = "*"
 
 [scratchpads.volume]
 # command = "pavucontrol --name=pavu-scratch"
-command = "pavucontrol"
+command = "pwvucontrol"
 animation = ""
 lazy = true
 unfocus = false
