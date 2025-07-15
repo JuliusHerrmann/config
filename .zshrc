@@ -1,26 +1,28 @@
 # User specific environment
 typeset -U PATH path
-PATH="$HOME/.local/bin:$HOME/bin:$PATH:/home/julius/Flutter/flutter/bin"
+PATH="$HOME/.local/bin:$HOME/bin:$PATH:/home/julius/Flutter/flutter/bin:/home/julius/.cargo/bin"
 export PATH="$HOME/Documents/scripts:$HOME/.symfony/bin:$PATH"
 export PATH
 
 # User specific aliases and functions
-alias ls="ls --color=auto"
+alias ls="eza --color=auto"
 alias ip="ip -c"
-alias lsa="ls -A"
-alias lsc="ls -lah"
-alias ..="cd .."
-alias .2="cd ../.."
-alias .3="cd ../../.."
-alias .4="cd ../../../.."
-alias .5="cd ../../../../.."
+alias lsa="eza -A"
+alias lsc="eza -lah -l --total-size"
+alias cd="z"
+alias j="zi"
+alias ..="z .."
+alias .2="z ../.."
+alias .3="z ../../.."
+alias .4="z ../../../.."
+alias .5="z ../../../../.."
 alias v=nvim
 alias r=ranger
 # get external ip
 alias exip='curl ipinfo.io/ip'
-alias mpv="devour mpv"
-alias sxiv="devour sxiv"
-alias zathura="devour zathura"
+# alias mpv="devour mpv"
+# alias sxiv="devour sxiv"
+# alias zathura="devour zathura"
 alias weather="curl v2.wttr.in/${1:-Saarbrücken}\?lang=de --silent | less -S -R -#3"
 alias sx="startx"
 alias sudo="sudo "
@@ -30,6 +32,12 @@ alias clip="xclip -selection clipboard"
 alias 🤌="sudo "
 # for easy dotfile management
 alias config='/usr/bin/git --git-dir=/home/julius/.cfg/ --work-tree=/home/julius'
+# list all installed packages nicely
+alias packs="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+# to make yay life in our hearts <3
+alias yay="paru"
+# nicer cat
+alias cat="bat"
 
 # The following lines were added by compinstall
 zstyle ':completion:*' completer _expand _complete _ignored
@@ -87,7 +95,8 @@ rehash_precmd() {
   if [[ -a /var/cache/zsh/pacman ]]; then
     local paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
     if (( zshcache_time < paccache_time )); then
-      rehash
+      rehash;
+      notify-send "Rehashing";
       zshcache_time="$paccache_time"
     fi
   fi
@@ -99,6 +108,18 @@ add-zsh-hook -Uz precmd rehash_precmd
 
 #display a cute cat :)
 fm6000 --cat 
+
+#syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #load better vim mode
 #source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 #export KEYTIMEOUT=1
+
+# set color scheme of bat
+export BAT_THEME="TwoDark"
+# better crtr+r search
+export MCFLY_KEY_SCHEME=vim
+export MCFLY_DISABLE_MENU=FALSE
+export MCFLY_PROMPT=">"
+eval "$(mcfly init zsh)"
+eval "$(zoxide init zsh)"

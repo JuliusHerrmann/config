@@ -19,6 +19,7 @@ my $alice;
 my $phb;
 my $asok;
 my $arch;
+my $geom;
 my $cat;
 my $help;
 my $not_de;
@@ -172,6 +173,7 @@ sub get_info {
         "dogbert" => \$dogbert,
         "alice" => \$alice,
         "arch" => \$arch,
+        "geom" => \$geom,
         "cat" => \$cat,
         "phb" => \$phb,
         "asok" => \$asok,
@@ -367,6 +369,19 @@ sub main {
         $text .= colored(q{  / _.~   ~._^\ ╯}, $color) . $info_lines[$i++];
         $text .= colored(q{ /.^         ^.\ }, $color) . $info_lines[$i++];
         $text .= colored(q{                 }, $color) . $info_lines[$i++];
+    }  elsif ($geom) {
+        $text .= colored(q{    ________     }, $color) . $info_lines[$i++];
+        $text .= colored(q{   /_______/\    }, $color) . $info_lines[$i++];
+        $text .= colored(q{   \ \    / /    }, $color) . $info_lines[$i++];
+        $text .= colored(q{ ___\ \__/_/___  }, $color) . $info_lines[$i++];
+        $text .= colored(q{/____\ \______/\ }, $color) . $info_lines[$i++];
+        $text .= colored(q{\ \   \/ /   / / }, $color) . $info_lines[$i++];
+        $text .= colored(q{ \ \  / /\  / /  }, $color) . $info_lines[$i++];
+        $text .= colored(q{  \ \/ /\ \/ /   }, $color) . $info_lines[$i++];
+        $text .= colored(q{   \_\/  \_\/    }, $color) . $info_lines[$i++];
+        $text .= colored(q{                 }, $color) . $info_lines[$i++];
+        $text .= colored(q{                 }, $color) . $info_lines[$i++];
+
     } elsif($cat){
 			 $text .= colored(q{              }, $color) . $info_lines[$i++];
 			 $text .= colored(q{              }, $color) . $info_lines[$i++];

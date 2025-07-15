@@ -12,7 +12,6 @@
 
 (deflisten workspace_mon0 :initial  "1" "bash scripts/get-active-workspace 0")
 (deflisten workspace_mon1 :initial  "1" "bash scripts/get-active-workspace 1")
-(deflisten workspace_mon2 :initial  "1" "bash scripts/get-active-workspace 2")
 (deflisten workspace_numbers :initial '[{"id":"1","windows":0},{"id":"2","windows":0},{"id":"3","windows":0},{"id":"4","windows":0},{"id":"5","windows":0},{"id":"6","windows":0},{"id":"7","windows":0},{"id":"8","windows":0},{"id":"9","windows":0},{"id":"10","windows":0}]' "bash scripts/get-workspaces")
 ;; Workspaces Widgets ;;
 (defwidget workspaces [monitor]
@@ -25,7 +24,7 @@
      (for current in workspace_numbers
       (button   :class "workspace_button ${current.windows > 0 ? "workspace_occupied" : "workspace_empty"}"
                 :onclick "hyprctl dispatch workspace ${current.id}"
-                {monitor == 0 ? (workspace_mon0 == current.id ? "" : "") : monitor == 1 ? (workspace_mon1 == current.id ? "" : "") : (workspace_mon2 == current.id ? "" : "")})
+                {monitor == 0 ? (workspace_mon0 == current.id ? "" : "") : (workspace_mon1 == current.id ? "" : "")})
      ) 
 	))
 
@@ -225,7 +224,7 @@
 (defwidget middle [monitor]
 	(box	:orientation "v" 
 			:space-evenly "false" 
-			:valign "center" 
+			:valign "start" 
 (workspaces :monitor {monitor})))
 
 ;; Bottom Widgets ;;
@@ -265,11 +264,10 @@
 	:geometry (geometry :x "0" 
 						:y "0" 
 						:height "100%" 
-						:width "47px"
-                        :anchor "left center")
+						:width "47px")
 	:monitor 0
     :exclusive true
-    :stacking "bt"
+    :stacking "fg"
 	:hexpand "false"
 	:vexpand "false"
 (bar :monitor 0))
@@ -279,28 +277,13 @@
 	:geometry (geometry :x "0" 
 						:y "0" 
 						:height "100%" 
-						:width "47px"
-                        :anchor "left center")
+						:width "47px")
 	:monitor 1
     :exclusive true
     :stacking "fg"
 	:hexpand "false"
 	:vexpand "false"
 (bar :monitor 1))
-
-;; Bar Windows ;;
-(defwindow bar3
-	:geometry (geometry :x "0" 
-						:y "0" 
-						:height "100%" 
-						:width "47px"
-                        :anchor "left center")
-	:monitor 2
-    :exclusive true
-    :stacking "fg"
-	:hexpand "false"
-	:vexpand "false"
-(bar :monitor 2))
 
 ;; ;; Calendar Windows ;;
 ;; (defwindow calendar

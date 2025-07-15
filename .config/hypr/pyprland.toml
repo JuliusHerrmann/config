@@ -20,8 +20,8 @@ position = "15% 15%"
 excludes = "*"
 
 [scratchpads.volume]
-# command = "pavucontrol --name=pavu-scratch"
-command = "pwvucontrol"
+command = "pavucontrol"
+# command = "pwvucontrol"
 animation = ""
 lazy = true
 unfocus = false
