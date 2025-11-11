@@ -14,10 +14,11 @@
 	#
 	# Otherwise, fonts are interpreted in Pango format.
 	# font = "/usr/share/fonts/redhat/RedHatMono-Regular.ttf"
-    font = "dm mono"
+    # font = "dm mono"
+    font = "0xProto Nerd Font Mono"
 
 	# Point size of text.
-	font-size = 24
+	font-size = 20
 
 	# Comma separated list of OpenType font feature settings to apply,
 	# if supported by the chosen font. The format is similar to the CSS
@@ -191,7 +192,8 @@
 	border-color = #89b4fa
 
 	# Radius of window corners in pixels.
-	corner-radius = 8
+	# corner-radius = 8
+	corner-radius = 0
 
 	# Padding between borders and text. Can be pixels or a percentage.
 	padding-top = 8
